@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            var num = prompt("소수 판별기 : 숫자를 입력해주세요");
+            num = Number(num);
+
+            var n = 0;
+            var check = false;
+
+            while(check === false) {
+                if(n != 1 && num % n === 0 && num == n) {
+                    console.log(n + " " + num + " " + check);
+                    check = true;
+                    break;
+                }
+
+                else if(n != 1 && num % n === 0 && num != n) {
+                    console.log(n + " " + num + " " + check);
+                    break;
+                }
+
+                n++;
+            }
+
+            if (check === true) {
+                alert(num + "은 소수입니다.");
+            }
+
+            else alert(num + "은 소수가 아닙니다.")
+
+            </script>
+    </body>
+</html>
